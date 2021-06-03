@@ -1,0 +1,15 @@
+kind: pipeline
+name: test-on-arm64
+
+platform:
+  arch: arm64
+
+steps:
+  - name: test
+    image: rust:1
+    environment:
+      RUSTFLAGS: "-C target-cpu=native"
+    commands:
+      - rustup default nightly
+      - rustup update
+      - cargo +nightly test --verbose --all
