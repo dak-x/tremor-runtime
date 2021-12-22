@@ -23,6 +23,8 @@ pub mod sink;
 pub mod source;
 
 pub(crate) mod s3;
+pub(crate) mod s3_source;
+
 #[macro_use]
 pub(crate) mod utils;
 
