@@ -2202,7 +2202,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "65e3984a414cce451bd6fa931298c2b384924ddc1b6201adec3b0c0c148dabfa"
 dependencies = [
  "prost 0.9.0",
- "prost-types",
+ "prost-types 0.9.0",
  "tonic",
 ]
 
@@ -3706,6 +3706,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "prost"
+version = "0.11.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "399c3c31cdec40583bb68f0b18403400d01ec4289c383aa047560439952c4dd7"
+dependencies = [
+ "bytes 1.1.0",
+ "prost-derive 0.11.0",
+]
+
+[[package]]
 name = "prost-build"
 version = "0.9.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3719,7 +3729,7 @@ dependencies = [
  "multimap",
  "petgraph",
  "prost 0.9.0",
- "prost-types",
+ "prost-types 0.9.0",
  "regex",
  "tempfile",
  "which 4.2.5",
@@ -3752,6 +3762,19 @@ dependencies = [
 ]
 
 [[package]]
+name = "prost-derive"
+version = "0.11.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "7345d5f0e08c0536d7ac7229952590239e77abf0a0100a1b1d890add6ea96364"
+dependencies = [
+ "anyhow",
+ "itertools",
+ "proc-macro2",
+ "quote",
+ "syn",
+]
+
+[[package]]
 name = "prost-types"
 version = "0.9.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3759,6 +3782,16 @@ checksum = "534b7a0e836e3c482d2693070f982e39e7611da9695d4d1f5a4b186b51faef0a"
 dependencies = [
  "bytes 1.1.0",
  "prost 0.9.0",
+]
+
+[[package]]
+name = "prost-types"
+version = "0.11.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d30bc806a29b347314be074ff0608ef8e547286e8ea68b061a2fe55689edc01f"
+dependencies = [
+ "bytes 1.1.0",
+ "prost 0.11.0",
 ]
 
 [[package]]
@@ -5698,7 +5731,7 @@ dependencies = [
  "pretty_assertions",
  "proptest",
  "prost 0.10.4",
- "prost-types",
+ "prost-types 0.11.0",
  "qwal",
  "rand 0.8.5",
  "rdkafka",
